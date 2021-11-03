@@ -13,3 +13,78 @@ h1{
 p{
 	margin: 0 0 .5rem 0;
 	}
+.anim{
+	background: #09c;
+	width: 500px;
+	height: 300px;
+	border: solid #000 1px;
+	float: left;
+	margin: 0 1rem 1rem 0;
+	overflow: hidden;
+}
+
+.anim__headline{
+	color: #ff9;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.25rem;
+	font-weight: bold;
+	position: relative;
+	top: -30px;
+	left: 50px;
+	opacity: 0;
+	animation: h2-stuff 10s ease 0s forwards;
+}
+
+@keyframes h2-stuff {
+	/* between moment 0 and 10%, no chenge */
+	0%{
+		top: -30px;
+		opacity: 0;
+	}
+	10% {
+		top: -30px;
+		opacity: 0;
+	}
+	15% {
+		top: 50px;
+		opacity: 1;
+	}
+	/* between moment 30% and 100%, no chenge */
+	100% {
+		top: 50px;
+		opacity: 1;
+	}
+}
+
+.anim__plane {
+	position: relative;
+	top: 100px;
+	left: -300px;
+	animation: plane-anim 10s linear forwards;
+}
+
+@keyframes plane-anim {
+	0% {
+		top: 100%;
+		left: -300px;
+	}
+	15% {
+		top: 100%;
+		left: -300px;
+		transform: rotate(0deg);
+	}
+	40% {
+		top: 0px;
+		left: 200px;
+	}
+	50% {
+		top: -300px;
+		left: 300px;
+		transform: rotate(-70deg);
+	}
+	100% {
+		top: -300px;
+		left: 300px;
+		transform: rotate(-70deg);
+	}
+}
